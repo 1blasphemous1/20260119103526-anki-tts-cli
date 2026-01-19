@@ -1,5 +1,9 @@
 # Release Notes
 
+## [20260119114952] - 2026-01-19
+### Changed
+- Updated `README.md` to explicitly list local repository dependencies (Anki Addon, Piper TTS).
+
 ## [20260119114726] - 2026-01-19
 ### Changed
 - Improved [`README.md`](README.md) with a Table of Contents and "Return to top" navigation links.

@@ -10,6 +10,8 @@ This project adapts the Anki TTS Player addon logic for use with GoldenDict and 
 - [GoldenDict Anki TTS Integration](#goldendict-anki-tts-integration)
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
+    - [Local Repositories](#local-repositories)
+    - [Software](#software)
   - [Usage](#usage)
     - [Testing the CLI](#testing-the-cli)
     - [GoldenDict Integration](#goldendict-integration)
@@ -19,6 +21,12 @@ This project adapts the Anki TTS Player addon logic for use with GoldenDict and 
 
 ## Requirements
 
+### Local Repositories
+This project depends on the following local repositories being present in your workspace:
+- **Anki Addon** (`20250421115831-anki-gtts-player`): Used for shared configuration, cache, and vendored libraries.
+- **Piper TTS** (`20241206010110-piper-tts`): Required if using the Piper TTS engine. The path to `piper_tts.py` acts as the driver.
+
+### Software
 - Python 3.x
 - **Libraries**: `requests`, `gTTS`, `pyperclip` (optional, for clipboard support).
 - **External Tools**: `ffplay` (from FFmpeg) must be in your system PATH to play audio.
