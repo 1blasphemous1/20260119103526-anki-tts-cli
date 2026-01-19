@@ -39,14 +39,14 @@ This project depends on the following local repositories being present in your w
 
 ### Testing the CLI
 ```powershell
-C:\Python\Python312\python.exe .\goldendict-tts.py "text to play" "en"
+C:\Python\Python312\python.exe .\anki-tts-cli.py "text to play" "en"
 ```
 
 ### GoldenDict Integration
 1. Go to **Edit > Dictionaries > Program**.
 2. Add a new entry:
    - **Name**: Anki-TTS
-   - **Command Line**: `C:\Python\Python312\python.exe "U:\voothi\20260119103526-goldendict-tts\goldendict-tts.py" "%GDWORD%" "en"`
+   - **Command Line**: `C:\Python\Python312\python.exe "U:\voothi\20260119103526-anki-tts-cli\anki-tts-cli.py" "%GDWORD%" "en"`
    - **Type**: Audio
 
 [Return to Top](#goldendict-anki-tts-integration)

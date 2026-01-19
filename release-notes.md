@@ -1,5 +1,11 @@
 # Release Notes
 
+## [v1.0.0] - 2026-01-19
+### Changed
+- Renamed project to `anki-tts-cli`.
+- Renamed main script from `goldendict-tts.py` to `anki-tts-cli.py`.
+- First stable release.
+
 ## [20260119115317] - 2026-01-19
 ### Documentation
 - Added RFC analyzing the appropriateness of the project name.
